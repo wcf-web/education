@@ -8,10 +8,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
+ * @Desc:  用户退出
  * @Author: chunfeng
- * @Description:  用户退出
- * @Date Created in  2020-07-10 17:21
- * @Modified By:
+ * @Date
  */
 @WebServlet(value = "/userexit")
 public class ExitServlet extends HttpServlet {
