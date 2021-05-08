@@ -67,7 +67,7 @@
 						<td>${list.examNo}</td>
 						<td>${list.examSubject}</td>
 						<td>${list.examTime}</td>
-						<td>${list.classes.classNo}</td>
+						<td>${list.aClass.classNo}</td>
 						<c:if test="${list.examState==1}">
 							<td align="center">未考试</td>
 							<td>

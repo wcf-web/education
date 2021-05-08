@@ -85,7 +85,7 @@
 		<tr>
             <td align="right">考试班级：</td>
             <td>
-				<input type="text" value="${exam.classes.classNo}" readonly />
+				<input type="text" value="${exam.aClass.classNo}" readonly />
 			</td>
         </tr>
 

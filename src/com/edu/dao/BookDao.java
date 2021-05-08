@@ -5,10 +5,9 @@ import com.edu.bean.Book;
 import java.util.List;
 
 /**
+ * @Desc:   书籍dao层
  * @Author: chunfeng
- * @Description:
- * @Date Created in  2020-07-08 15:53
- * @Modified By:
+ * @Date
  */
 public interface BookDao {
 
