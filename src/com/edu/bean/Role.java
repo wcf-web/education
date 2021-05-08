@@ -3,10 +3,9 @@ package com.edu.bean;
 import java.util.List;
 
 /**
+ * @Desc:   角色
  * @Author: chunfeng
- * @Description:
- * @Date Created in  2020-07-09 21:03
- * @Modified By:
+ * @Date
  */
 public class Role {
     private int roleId;

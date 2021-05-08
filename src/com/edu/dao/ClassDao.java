@@ -1,6 +1,6 @@
 package com.edu.dao;
 
-import com.edu.bean.Classes;
+import com.edu.bean.Class;
 
 import java.util.Date;
 import java.util.List;
@@ -18,14 +18,14 @@ public interface ClassDao {
      * @param majorId
      * @return
      */
-    public List<Classes> getClassById(int collegeId,int majorId);
+    public List<Class> getClassById(int collegeId, int majorId);
 
     /**
      * 根据class的id寻找班级
      * @param classId
      * @return
      */
-    public Classes findClass(int classId);
+    public Class findClass(int classId);
 
     /**
      * 获取班级信息
@@ -34,7 +34,7 @@ public interface ClassDao {
      * @param pageSize
      * @return
      */
-    public List<Classes> getAllclasses(String className,int pageIndex,int pageSize);
+    public List<Class> getAllclasses(String className, int pageIndex, int pageSize);
 
     /**
      * 获取班级信息的总条数
@@ -61,7 +61,7 @@ public interface ClassDao {
      * 获取待审核的班级
      * @return
      */
-    public List<Classes> auditClass(String classNo,String className);
+    public List<Class> auditClass(String classNo, String className);
 
     /**
      * 获取待审核班级的总条数

@@ -1,6 +1,6 @@
 package com.edu.dao.exp;
 
-import com.edu.bean.Classes;
+import com.edu.bean.Class;
 import com.edu.bean.Exam;
 import com.edu.dao.ExamDao;
 import com.edu.util.DruidUtil;
@@ -47,9 +47,9 @@ public class ExamDaoExp extends DruidUtil implements ExamDao {
                 exam.setExamState(set.getInt("exam_state"));
                 exam.setExamCount(set.getInt("exam_count"));
                 // 将考试与班级建立联系
-                Classes classes = new Classes();
-                classes.setClassNo(set.getString("classno"));
-                exam.setClasses(classes);
+                Class aClass = new Class();
+                aClass.setClassNo(set.getString("classno"));
+                exam.setClasses(aClass);
                 list.add(exam);
             }
         } catch (SQLException throwables) {
@@ -128,9 +128,9 @@ public class ExamDaoExp extends DruidUtil implements ExamDao {
                 exam.setExamCount(set.getInt("exam_count"));
                 exam.setExamState(set.getInt("exam_state"));
                 // 建立考试和班级之间的联系
-                Classes classes = new Classes();
-                classes.setClassNo(set.getString("classno"));
-                exam.setClasses(classes);
+                Class aClass = new Class();
+                aClass.setClassNo(set.getString("classno"));
+                exam.setClasses(aClass);
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();

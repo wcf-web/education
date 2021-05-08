@@ -3,10 +3,9 @@ package com.edu.bean;
 import java.util.List;
 
 /**
+ * @Desc:   学院
  * @Author: chunfeng
- * @Description:
- * @Date Created in  2020-07-06 18:38
- * @Modified By:
+ * @Date
  */
 public class College {
     private int collegeId;

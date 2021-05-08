@@ -3,10 +3,9 @@ package com.edu.bean;
 import java.util.Date;
 
 /**
+ * @Desc:   学生
  * @Author: chunfeng
- * @Description:
- * @Date Created in  2020-07-05 17:36
- * @Modified By:
+ * @Date
  */
 public class Student {
     private int studentId;

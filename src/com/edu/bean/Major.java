@@ -3,24 +3,23 @@ package com.edu.bean;
 import java.util.List;
 
 /**
+ * @Desc:  专业类，专业与学生：一对多
  * @Author: chunfeng
- * @Description: 专业类，专业与学生：一对多
- * @Date Created in  2020-07-06 17:15
- * @Modified By:
+ * @Date
  */
 public class Major {
     private int majorId;
     private String majorName;
     private List<Student> studentList;
     private College college;
-    private List<Classes> classesList;
+    private List<Class> classList;
 
-    public List<Classes> getClassesList() {
-        return classesList;
+    public List<Class> getClassesList() {
+        return classList;
     }
 
-    public void setClassesList(List<Classes> classesList) {
-        this.classesList = classesList;
+    public void setClassesList(List<Class> classList) {
+        this.classList = classList;
     }
 
     public Major() {

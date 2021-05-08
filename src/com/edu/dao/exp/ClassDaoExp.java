@@ -1,6 +1,6 @@
 package com.edu.dao.exp;
 
-import com.edu.bean.Classes;
+import com.edu.bean.Class;
 import com.edu.bean.College;
 import com.edu.bean.Major;
 import com.edu.bean.Teacher;
@@ -20,8 +20,8 @@ import java.util.List;
  */
 public class ClassDaoExp extends DruidUtil implements ClassDao {
     @Override
-    public List<Classes> getClassById(int collegeId,int majorId) {
-        List<Classes> list = new ArrayList<>();
+    public List<Class> getClassById(int collegeId, int majorId) {
+        List<Class> list = new ArrayList<>();
         String sql = "SELECT * FROM classes WHERE collegeid=? and majorid=? ";
         List params = new ArrayList();
         params.add(collegeId);
@@ -31,7 +31,7 @@ public class ClassDaoExp extends DruidUtil implements ClassDao {
             while (set.next()){
                 int classId = set.getInt("classid");
                 String className = set.getString("classname");
-                list.add(new Classes(classId,className));
+                list.add(new Class(classId,className));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -42,11 +42,11 @@ public class ClassDaoExp extends DruidUtil implements ClassDao {
     }
 
     @Override
-    public Classes findClass(int classId) {
-        Classes classes = new Classes();
+    public Class findClass(int classId) {
+        Class aClass = new Class();
         // 1. 定义sql语句
         String sql = "select  *\n" +
-                "from major m,college c,classes e\n" +
+                "from major m,college c,aClass e\n" +
                 "where  e.majorid=m.majorid and c.collegeid=e.collegeid and classid=? ";
         // 2. 定义参数
         List params = new ArrayList();
@@ -55,26 +55,26 @@ public class ClassDaoExp extends DruidUtil implements ClassDao {
         try {
             set = query(sql,params);
             while (set.next()){
-                classes.setClassNo(set.getString("classno"));
-                classes.setCollegeName(set.getString("classname"));
-                classes.setMajorName(set.getString("majorname"));
-                classes.setClassName(set.getString("className"));
-                classes.setClassNum(set.getInt("classnum"));
-                classes.setStartDate(set.getDate("startdate"));
-                classes.setEndDate(set.getDate("enddate"));
-                classes.setContent(set.getString("content"));
+                aClass.setClassNo(set.getString("classno"));
+                aClass.setCollegeName(set.getString("classname"));
+                aClass.setMajorName(set.getString("majorname"));
+                aClass.setClassName(set.getString("className"));
+                aClass.setClassNum(set.getInt("classnum"));
+                aClass.setStartDate(set.getDate("startdate"));
+                aClass.setEndDate(set.getDate("enddate"));
+                aClass.setContent(set.getString("content"));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }finally {
             close();
         }
-        return classes;
+        return aClass;
     }
 
     @Override
-    public List<Classes> getAllclasses(String className, int pageIndex, int pageSize) {
-        List<Classes> list = new ArrayList<>();
+    public List<Class> getAllclasses(String className, int pageIndex, int pageSize) {
+        List<Class> list = new ArrayList<>();
         // 1. 定义sql--动态sql
         StringBuffer sql = new StringBuffer("select * \n" +
                 "from classes ca,college co,teacher t,major m\n" +
@@ -93,20 +93,20 @@ public class ClassDaoExp extends DruidUtil implements ClassDao {
         try {
             set = query(sql.toString(),params);
             while (set.next()){
-                Classes classes = new Classes();
-                classes.setClassId(set.getInt("classid"));
-                classes.setClassNo(set.getString("classno"));
-                classes.setClassName(set.getString("classname"));
-                classes.setClassStatus(set.getInt("classstatus"));
-                classes.setClassNum(set.getInt("classnum"));
+                Class aClass = new Class();
+                aClass.setClassId(set.getInt("classid"));
+                aClass.setClassNo(set.getString("classno"));
+                aClass.setClassName(set.getString("classname"));
+                aClass.setClassStatus(set.getInt("classstatus"));
+                aClass.setClassNum(set.getInt("classnum"));
                 // 表联结
                 Major major = new Major();
                 major.setMajorName(set.getString("majorname"));
-                classes.setMajor(major);
+                aClass.setMajor(major);
                 Teacher teacher = new Teacher();
                 teacher.setTeacherName(set.getString("teachername"));
-                classes.setTeacher(teacher);
-                list.add(classes);
+                aClass.setTeacher(teacher);
+                list.add(aClass);
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -171,8 +171,8 @@ public class ClassDaoExp extends DruidUtil implements ClassDao {
     }
 
     @Override
-    public List<Classes> auditClass(String classNo,String className) {
-        List<Classes> classesList = new ArrayList<>();
+    public List<Class> auditClass(String classNo, String className) {
+        List<Class> classList = new ArrayList<>();
         // 1. 定义sql语句
         StringBuffer sql = new StringBuffer("SELECT * " +
                 " FROM classes c,college e,teacher t " +
@@ -192,26 +192,26 @@ public class ClassDaoExp extends DruidUtil implements ClassDao {
         set = query(sql.toString(),params);
         try {
             while (set.next()){
-                Classes classes = new Classes();
-                classes.setClassId(set.getInt("classid"));
-                classes.setClassNo(set.getString("classno"));
-                classes.setClassName(set.getString("classname"));
-                classes.setClassNum(Integer.parseInt(set.getString("classnum")));
+                Class aClass = new Class();
+                aClass.setClassId(set.getInt("classid"));
+                aClass.setClassNo(set.getString("classno"));
+                aClass.setClassName(set.getString("classname"));
+                aClass.setClassNum(Integer.parseInt(set.getString("classnum")));
                 // 建立班级与学院、老师的联系
                 College college = new College();
                 college.setCollegeName(set.getString("collegename"));
-                classes.setCollege(college);
+                aClass.setCollege(college);
                 Teacher teacher = new Teacher();
                 teacher.setTeacherName(set.getString("teachername"));
-                classes.setTeacher(teacher);
-                classesList.add(classes);
+                aClass.setTeacher(teacher);
+                classList.add(aClass);
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }finally {
             close();
         }
-        return classesList;
+        return classList;
     }
 
     @Override

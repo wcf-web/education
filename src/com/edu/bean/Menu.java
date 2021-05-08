@@ -1,10 +1,9 @@
 package com.edu.bean;
 
 /**
+ * @Desc:   菜单
  * @Author: chunfeng
- * @Description:
- * @Date Created in  2020-07-10 8:42
- * @Modified By:
+ * @Date
  */
 public class Menu {
     private int menuId;

@@ -1,6 +1,6 @@
 package com.edu.service.exp;
 
-import com.edu.bean.Classes;
+import com.edu.bean.Class;
 import com.edu.dao.ClassDao;
 import com.edu.dao.exp.ClassDaoExp;
 import com.edu.service.ClassService;
@@ -17,12 +17,12 @@ import java.util.List;
 public class ClassServiceExp implements ClassService {
     private ClassDao dao = new ClassDaoExp();
     @Override
-    public List<Classes> getClassById(int collegeId, int majorId) {
+    public List<Class> getClassById(int collegeId, int majorId) {
         return dao.getClassById(collegeId,majorId);
     }
 
     @Override
-    public List<Classes> getAllclasses(String className, int pageIndex, int pageSize) {
+    public List<Class> getAllclasses(String className, int pageIndex, int pageSize) {
         return dao.getAllclasses(className,pageIndex,pageSize);
     }
 
@@ -37,12 +37,12 @@ public class ClassServiceExp implements ClassService {
     }
 
     @Override
-    public Classes findClass(int classId) {
+    public Class findClass(int classId) {
         return dao.findClass(classId);
     }
 
     @Override
-    public List<Classes> auditClass(String classNo,String className) {
+    public List<Class> auditClass(String classNo, String className) {
         return dao.auditClass(classNo,className);
     }
 

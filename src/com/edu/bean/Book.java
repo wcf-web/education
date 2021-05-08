@@ -1,10 +1,9 @@
 package com.edu.bean;
 
 /**
+ * @Desc:   书籍
  * @Author: chunfeng
- * @Description:
- * @Date Created in  2020-07-08 15:47
- * @Modified By:
+ * @Date
  */
 public class Book {
     private int bookId;

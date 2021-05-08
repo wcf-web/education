@@ -31,35 +31,35 @@
 	 <table border="1" width="100%" class="table_a">
                 <tr>
                     <td width="120px;">院系：<span style="color:red">*</span>：</td>
-                    <td><input type="text" name="f_goods_name" value="${classes.collegeName}" /></td>
+                    <td><input type="text" name="f_goods_name" value="${aClass.collegeName}" /></td>
                 </tr>
                 <tr>
                     <td>班级编号：<span style="color:red">*</span>：</td>
                     <td>
-                       <input type="text" name="f_goods_name" value="${classes.classNo}" readonly />
+                       <input type="text" name="f_goods_name" value="${aClass.classNo}" readonly />
                     </td>
                 </tr>
                
                 <tr>
                     <td>班级名称：<span style="color:red">*</span>：</td>
                     <td>
-						<input type="text" name="f_goods_price" value="${classes.className}" readonly/></td>
+						<input type="text" name="f_goods_price" value="${aClass.className}" readonly/></td>
                 </tr>
                 <tr>
                     <td>人数：<span style="color:red">*</span>：</td>
                     <td>
-						<input type="text" name="f_goods_price" value="${classes.classNum}" readonly/></td>
+						<input type="text" name="f_goods_price" value="${aClass.classNum}" readonly/></td>
                 </tr>
 
 				 <tr>
                     <td>开班时间：<span style="color:red">*</span>：</td>
                     <td>
-						<input type="text" name="f_goods_price" value="${classes.startDate}" readonly/></td>
+						<input type="text" name="f_goods_price" value="${aClass.startDate}" readonly/></td>
                 </tr>
                 <tr>
                     <td>毕业时间：<span style="color:red">*</span>：</td>
                     <td>
-						<input type="text" name="f_goods_price" value="${classes.endDate}" readonly/></td>
+						<input type="text" name="f_goods_price" value="${aClass.endDate}" readonly/></td>
                 </tr>
 				<tr>
                     <td>状态<span style="color:red">*</span>：</td>
@@ -77,7 +77,7 @@
                 <tr>
                     <td>简介<span style="color:red">*</span>：</td>
                     <td>
-                        <textarea>${classes.content}</textarea>
+                        <textarea>${aClass.content}</textarea>
                     </td>
                 </tr>
             </table>

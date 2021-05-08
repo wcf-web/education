@@ -3,22 +3,21 @@ package com.edu.bean;
 import java.util.List;
 
 /**
+ * @Desc:   老师
  * @Author: chunfeng
- * @Description:
- * @Date Created in  2020-07-07 14:30
- * @Modified By:
+ * @Date
  */
 public class Teacher {
     private int teacherId;
     private String teacherName;
-    private List<Classes> classesList;
+    private List<Class> classList;
 
-    public List<Classes> getClassesList() {
-        return classesList;
+    public List<Class> getClassesList() {
+        return classList;
     }
 
-    public void setClassesList(List<Classes> classesList) {
-        this.classesList = classesList;
+    public void setClassesList(List<Class> classList) {
+        this.classList = classList;
     }
 
     public int getTeacherId() {

@@ -1,17 +1,15 @@
 package com.edu.util;
 
-/**
- * @Author: chunfeng
- * @Description:
- * @Date Created in  2020-07-05 8:50
- * @Modified By:
- */
 import com.alibaba.druid.pool.DruidDataSource;
-
 import java.sql.*;
 import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ * @Desc:   Druid连接工具类
+ * @Author: chunfeng
+ * @Date
+ */
 public class DruidUtil {
     protected static Connection con = null;
     protected static PreparedStatement state = null;
@@ -39,7 +37,6 @@ public class DruidUtil {
         ds.setPassword(password);
         ds.setMaxActive(5);
         ds.setMaxWait(3000);
-
     }
 
     /**

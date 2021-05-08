@@ -3,10 +3,9 @@ package com.edu.bean;
 import java.util.Date;
 
 /**
+ * @Desc:   考试
  * @Author: chunfeng
- * @Description:
- * @Date Created in  2020-07-08 7:40
- * @Modified By:
+ * @Date
  */
 public class Exam {
     private int examId;
@@ -17,15 +16,15 @@ public class Exam {
     private int examCount;
     // 1：未考试  2：考试中  3: 已考完
     private int examState;
-    private Classes classes;
+    private Class aClass;
 
 
-    public Classes getClasses() {
-        return classes;
+    public Class getClasses() {
+        return aClass;
     }
 
-    public void setClasses(Classes classes) {
-        this.classes = classes;
+    public void setClasses(Class aClass) {
+        this.aClass = aClass;
     }
 
     public int getExamId() {

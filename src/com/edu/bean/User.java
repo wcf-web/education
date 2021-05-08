@@ -1,10 +1,9 @@
 package com.edu.bean;
 
 /**
+ * @Desc:   用户
  * @Author: chunfeng
- * @Description:
- * @Date Created in  2020-07-09 10:18
- * @Modified By:
+ * @Date
  */
 public class User {
     private int userId;
