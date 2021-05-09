@@ -143,7 +143,8 @@
 							<table cellspacing=0 cellpadding=0 width=150 border=0>
                         <tr height=22>
                             <td style="padding-left: 30px" background=./img/menu_bt.jpg>
-							   <a     class=menuparent onclick=expand(3)    href="javascript:void(0);">学员中心</a>
+								<%--将学员改为学生--%>
+							   <a     class=menuparent onclick=expand(3)    href="javascript:void(0);">学生中心</a>
 							 </td>
 						</tr>
                         <tr height=4>

@@ -30,7 +30,7 @@
 	<div class="div_head" style="width: 100%;text-align:center;">
 		<span> <span style="float:left">当前位置是：教务中心-》班级管理</span> <span
 			style="float: right; margin-right: 8px; font-weight: lighter">
-            <a style="text-decoration: blink" href="javascript:alert('操作成功！');">【导出excel】&nbsp;&nbsp;</a>
+
             <a style="text-decoration: blink" href="/getcollegeforclass.do">【新增班级】&emsp;&emsp;&emsp;&emsp;</a>
 		</span>
 		</span>

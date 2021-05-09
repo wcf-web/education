@@ -32,7 +32,7 @@
 <div class="div_head" style="width: 100%;text-align:center;">
 		<span> <span style="float:left">当前位置是：书籍管理</span> <span
 			style="float:right;margin-right: 8px;font-weight: bold">
-            <a style="text-decoration: none;" href="javascript:alert('操作成功！');">【导出excel】</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;
 			<a style="text-decoration: none;" href="/saveid?classid=${classid}">【新增书籍】</a>&nbsp;&nbsp;&nbsp;&nbsp;
 		</span>
 		</span>
